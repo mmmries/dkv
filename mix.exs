@@ -11,7 +11,10 @@ defmodule Dkv.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :lbm_kv]]
+    [
+      mod: {Dkv, []},
+      applications: [:logger, :lbm_kv],
+    ]
   end
 
   defp deps do
